@@ -160,12 +160,13 @@ app.post("/api/order", async (req, res) => {
 
   try {
     const transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com", // Specify the host explicitly
-        port: 465,             // Specify the secure port
-        secure: true,          // Use SSL
-        auth: {
-          user: process.env.EMAIL_USER || "manmeet8549singh@gmail.com",
-          pass: process.env.EMAIL_PASS || "ronq ixzq jduq giko"
+  host: "smtp.gmail.com",
+  port: 587,             // Change port to 587
+  secure: false,         // Set to false for STARTTLS
+  requireTLS: true,      // Require TLS security upgrade
+  auth: {
+    user: process.env.EMAIL_USER || "manmeet8549singh@gmail.com",
+    pass: process.env.EMAIL_PASS || "ronq ixzq jduq giko"
   }
 });
 
