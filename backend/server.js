@@ -112,7 +112,7 @@ app.post("/api/order", async (req, res) => {
 
     const msg = {
       // Use environment variables for security and configuration
-      to: process.env.ORDER_RECEIVER_EMAIL || "jagminders2@gmail.com", 
+      to: process.env.ORDER_RECEIVER_EMAIL || "manmeetsinghvirdi41@gmail.com", 
       from: process.env.EMAIL_USER || "manmeet8549singh@gmail.com",   // Must be a verified SendGrid sender
       subject: `🛒 New Order from ${name}`,
       html: `
