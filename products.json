@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "Nirog Wheat Chakki Atta",
+    "image": "product_wheat.png",
+    "price": 650,
+    "oldPrice": 700,
+    "variants": ["10 KG"],
+    "category": "flour"
+  },
+ 
+  
+  {
+    "id": 2,
+    "name": "Mustard Oil",
+    "subtitle": "[Black Mustard]",
+    "image": "product_mustard-oil.png",
+    "price": 350,
+    "oldPrice": 400,
+    "variants": ["1 L"],
+    "category": "oil"
+  },
+  
+  {
+    "id": 3,
+    "name": "Mustard Oil",
+    "subtitle": "[Yellow Mustard]",
+    "image": "product_mustard_yellow.png",
+    "price": 550,
+    "oldPrice": 600,
+    "variants": ["1 L"],
+    "category": "oil"
+  },
+  {
+  "id": 4,
+  "name": "Coconut Oil ",
+  "subtitle": "[Cold Pressed]",
+  "image": "Coconut_oil.jpg",
+  "category": "oil",
+  "variants": [
+    { "weight": "100 ml", "price": 100, "oldPrice": 150 },
+    { "weight": "500 ml", "price": 450, "oldPrice": 550 },
+    { "weight": "1L", "price": 900, "oldPrice": 1000 }
+  ]
+},
+{
+    "id": 5,
+    "name": "Almond oil",
+    "subtitle": "[Badam Rogan]",
+    "image": "Almond_oil.jpg",
+    "price": 350,
+    "oldPrice": 450,
+    "variants": ["100 ml"],
+    "category": "oil"
+  },
+  {
+    "id": 6,
+    "name": "Groundnut oil",
+    "subtitle": "[Cold Pressed]",
+    "image": "Groundnut_oil.png",
+    "price": 400,
+    "oldPrice": 500,
+    "variants": ["1 L"],
+    "category": "oil"
+  },
+  {
+    "id": 7,
+    "name": "Ragi Flour",
+    "image": "wheat_packet.png",
+    "price": 150,
+    "oldPrice": 170,
+    "variants": ["1 KG"],
+    "category": "flour"
+  },
+  {
+    "id": 8,
+    "name": "Jau",
+    "image": "wheat_packet.png",
+    "price": 120,
+    "oldPrice": 150,
+    "variants": ["1 KG"],
+    "category": "flour"
+  },
+  {
+    "id": 9,
+    "name": "Ragi",
+    "image": "wheat_packet.png",
+    "price": 120,
+    "oldPrice": 150,
+    "variants": ["1 KG"],
+    "category": "flour"
+  },
+  {
+    "id": 10,
+    "name": "Besan",
+    "image": "wheat_packet.png",
+    "price": 200,
+    "oldPrice": 250,
+    "variants": ["1 KG"],
+    "category": "flour"
+  },
+  {
+  "id": 11,
+  "name": "Dalia ",
+  "image": "wheat_packet.png",
+  "category": "flour",
+  "variants": [
+    { "weight": "500 g", "price": 60, "oldPrice": 70 },
+    { "weight": "1 kg", "price": 100, "oldPrice": 120 }
+  ]
+  }
+]

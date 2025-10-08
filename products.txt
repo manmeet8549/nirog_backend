@@ -1,0 +1,54 @@
+ {
+    "id": 2,
+    "name": "Makki (Corn)",
+    "image": "product_millet.png",
+    "price": 155,
+    "oldPrice": 205,
+    "variants": ["750G"],
+    "category": "flour"
+  },
+  {
+    "id": 3,
+    "name": "Ragi (Finger Millet)",
+    "image": "product_ragi.png",
+    "price": 99,
+    "oldPrice": 130,
+    "variants": ["750G"],
+    "category": "flour"
+  },
+  {
+    "id": 4,
+    "name": "Jowar (Sorghum)",
+    "image": "product_jowar.png",
+    "price": 142,
+    "oldPrice": 150,
+    "variants": ["750G"],
+    "category": "flour"
+  },
+  {
+    "id": 5,
+    "name": "Jau (Barley)",
+    "image": "product_jau.png",
+    "price": 155,
+    "oldPrice": 205,
+    "variants": ["750G"],
+    "category": "flour"
+  },
+  {
+    "id": 6,
+    "name": "Bajra (Pearl Millet)",
+    "image": "product_bajra.png",
+    "price": 99,
+    "oldPrice": 130,
+    "variants": ["750G"],
+    "category": "flour"
+  },
+  {
+    "id": 7,
+    "name": "Multigrain",
+    "image": "product_multigrain.png",
+    "price": 142,
+    "oldPrice": 150,
+    "variants": ["750G"],
+    "category": "flour"
+  },

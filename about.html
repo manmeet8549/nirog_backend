@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="description" content="Buy organic flours, cold-pressed oils, and more at Nirog Organic.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style4.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>About | Nirog Organic</title>
+  <style>
+    /* Global Styles */
+    
+
+    
+    .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #606c38;
+  padding: 20px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+.navbar a
+{
+    
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.nav-links li a {
+  color: #dda15e;
+  text-decoration: none;
+  font-size: 100%;
+  display: block;
+}
+
+.nav-links li a:hover {
+  color: #bc6c25;
+}
+
+.hamburger {
+  font-size: 40px;
+  color: #fefae0;
+  cursor: pointer;
+  z-index: 1001;
+}
+  .nav-links {
+    list-style: none;
+    position: fixed;
+    top: 82px;
+    left: -100%; 
+    width: 20%;
+    height: 100%;
+    background-color: #283618f3; 
+    padding-top: 60px;
+    padding-left: 0px;
+    flex-direction: column;
+    z-index: 999;
+    transition: left 0.4s ease-in-out;
+    display: flex; 
+    border-radius: 0px;    
+  }
+
+  .nav-links li {
+        border-bottom: none;
+        padding: 15px;
+        text-align: left;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fefae0;
+}
+
+    
+
+    
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 2rem auto;
+    }
+
+    .owner-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .owner-section img {
+      max-width: 220px;
+      border-radius: 12px;
+    }
+
+    .owner-details h2 {
+      margin: 0 0 0.5rem;
+      color: #3a2e25;
+    }
+
+    .owner-details p {
+      margin: 0.3rem 0;
+    }
+
+    .content-section {
+      margin-top: 3rem;
+    }
+
+    .content-section h2 {
+      color: #2f4f2f;
+      margin-bottom: 1rem;
+    }
+
+    .content-card {
+      background: #fff;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .content-card h3 {
+      margin-top: 0;
+      color: #5a422d;
+    }
+
+    footer {
+      background-color: #3c2a1e;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .owner-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      .owner-section img {
+        max-width: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+        <i class='bx bx-menu hamburger' id="hamburger"></i>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+           
+
+        </ul>
+        <div class="logo">NIROG ORGANIC</div>
+    <div class="nav-icon" ><a href="login.html" style="font-size:150%;color: #fefafe;;"><i class='bx bx-id-card'></a></i></div>
+  </nav>
+
+    <!-- Owner Section -->
+    <section class="owner-section">
+      <img src="f1e0189f-81ee-4963-a0ba-3be43e17f8d3.jpeg" alt="Mr. Jagminder Singh">
+      <div class="owner-details">
+        <h2>Mr. Jagminder Singh</h2>
+        <p><strong>Contact:</strong> +91 97806 71784</p>
+        <p><strong>Email:</strong> nirogorganic.com</p>
+        <p>Founder & Owner of <strong>Nirog Organic</strong></p>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+      <div class="content-card">
+        <h3>Organic Mustard Seed Oil</h3>
+        <p>Our organic mustard seed oil is extracted through traditional cold-pressed methods, retaining natural nutrients and flavor. It is rich in omega-3 and omega-6 fatty acids, antioxidants, and essential vitamins. Regular use supports heart health, improves digestion, boosts immunity, and promotes skin and hair wellness.</p>
+      </div>
+
+      <div class="content-card">
+        <h3>Organic Wheat Flour</h3>
+        <p>Our organic wheat flour is stone-ground to preserve natural bran and germ, ensuring high fiber and nutrient content. It helps maintain healthy digestion, provides sustained energy, and is a great source of essential minerals like iron and magnesium. Consuming organic wheat flour contributes to overall wellness without harmful chemicals or additives.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Nirog Organic | All Rights Reserved</p>
+  </footer>
+
+      <script src="script4.js"></script>
+</body>
+</html>

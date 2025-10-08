@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fefae0;
+  padding: 20px;
+  color: #432818;
+}
+
+.user-details h3 {
+  margin: 20px 0 10px;
+  color: #283618;
+}
+
+#user-form input,
+#user-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+#user-form textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+.checkout-container {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #606c38;
+}
+
+.summary h3,
+.payment-methods h3 {
+  margin: 20px 0 10px;
+  color: #283618;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px dashed #ccc;
+}
+
+.total {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #bc6c25;
+}
+
+.payment-methods label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+#pay-button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  background-color: #606c38;
+  color: #fefae0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#pay-button:hover {
+  background-color: #4d5b2d;
+}
