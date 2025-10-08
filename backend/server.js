@@ -160,12 +160,14 @@ app.post("/api/order", async (req, res) => {
 
   try {
     const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER || "manmeet8549singh@gmail.com", // Fallback for local testing
-        pass: process.env.EMAIL_PASS || "ronq ixzq jduq giko"         // Fallback for local testing
-      }
-    });
+        host: "smtp.gmail.com", // Specify the host explicitly
+        port: 465,             // Specify the secure port
+        secure: true,          // Use SSL
+        auth: {
+          user: process.env.EMAIL_USER || "manmeet8549singh@gmail.com",
+          pass: process.env.EMAIL_PASS || "ronq ixzq jduq giko"
+  }
+});
 
     const cartItemsHtml = cart.map(item =>
       `<li>${item.name} x ${item.quantity} — ₹${item.price * item.quantity}</li>`
