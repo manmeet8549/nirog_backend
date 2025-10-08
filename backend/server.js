@@ -2,17 +2,28 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const cors = require('cors');
+const nodemailer = require("nodemailer"); // Added for the /api/order route
 
 const app = express();
-app.use(cors());
+
+// 1. Use environment variables for the allowed frontend origin
+const allowedOrigins = process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(',') : ["https://your-frontend.onrender.com"];
+app.use(cors({
+  origin: allowedOrigins,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
 app.use(express.json());
 
-// MongoDB Connection
-const MONGODB_URI = 'mongodb+srv://manmeetsinghvirdi41_db_user:manmeet8549@clusternirog.ne0dogp.mongodb.net/myShopDB?retryWrites=true&w=majority';
+// 2. Use environment variable for MongoDB URI
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://manmeetsinghvirdi41_db_user:manmeet8549@clusternirog.ne0dogp.mongodb.net/myShopDB?retryWrites=true&w=majority';
 
 mongoose.connect(MONGODB_URI)
   .then(() => console.log('MongoDB Connected'))
   .catch((err) => console.error('MongoDB connection error:', err));
+
+// ... (userSchema and cartSchema definitions remain the same)
 
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
@@ -140,17 +151,6 @@ app.delete('/api/cart/:username/:itemName', async (req, res) => {
 });
 
 
-// Start Server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
-
-
-//nodemailer setup for sending order confirmation emails
-
-const nodemailer = require("nodemailer");
-
 app.post("/api/order", async (req, res) => {
   const {
     name, mobile, address, landmark,
@@ -162,8 +162,8 @@ app.post("/api/order", async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "manmeet8549singh@gmail.com",         // ✅ Replace with your Gmail
-        pass: "ronq ixzq jduq giko"            // ✅ Replace with Gmail App Password
+        user: process.env.EMAIL_USER || "manmeet8549singh@gmail.com", // Fallback for local testing
+        pass: process.env.EMAIL_PASS || "ronq ixzq jduq giko"         // Fallback for local testing
       }
     });
 
@@ -172,8 +172,8 @@ app.post("/api/order", async (req, res) => {
     ).join("");
 
     const mailOptions = {
-      from: '"Nirog Organic Orders" <manmeet8549singh@gmail.com>',
-      to: "jagminders2@gmail.com",            // ✅ Your own email to receive order
+      from: `"${process.env.EMAIL_NAME || "Nirog Organic Orders"}" <${process.env.EMAIL_USER || "manmeet8549singh@gmail.com"}>`,
+      to: process.env.ORDER_RECEIVER_EMAIL || "jagminders2@gmail.com", // Use environment variable
       subject: `🛒 New Order from ${name}`,
       html: `
         <h2>New Order Details</h2>
@@ -194,4 +194,12 @@ app.post("/api/order", async (req, res) => {
     console.error("Email Error:", error);
     res.status(500).json({ success: false, message: "Failed to send order email." });
   }
+});
+
+
+// Start Server
+// 4. Removed "0.0.0.0" and rely only on process.env.PORT, which Render automatically sets.
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`✅ Server running on port ${PORT}`);
 });
